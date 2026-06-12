@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import { categories, iconMap } from '@/lib/categories';
+export function CategoryGrid() { return <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{categories.map((category) => { const Icon = iconMap[category.iconName as keyof typeof iconMap]; return <Link href={`/explore?category=${category.name}`} key={category.name} className="glass rounded-3xl p-5 transition hover:-translate-y-1 hover:border-blue-400/40"><div className={`mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${category.gradient}`}><Icon className="h-6 w-6" /></div><h3 className="font-bold">{category.name}</h3><p className="mt-2 text-sm text-slate-400">{category.description}</p></Link>; })}</div>; }

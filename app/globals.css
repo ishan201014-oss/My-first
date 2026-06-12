@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { @apply min-h-screen bg-ink text-slate-100 antialiased; }
+::selection { @apply bg-purple-500/40 text-white; }
+.glass { @apply border border-white/10 bg-white/[0.06] shadow-2xl shadow-black/30 backdrop-blur-xl; }
+.light .glass { @apply border-slate-200 bg-white/80 text-slate-950 shadow-slate-200/70; }
+.neon-text { @apply bg-gradient-to-r from-neon-blue via-white to-neon-purple bg-clip-text text-transparent; }
+.grid-mask { background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, black, transparent); }
+button, a { -webkit-tap-highlight-color: transparent; }
